@@ -1,0 +1,19 @@
+{{ listMouvement | json }}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>category</th>
+      <th>montant</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let mouvement of listMouvement">
+      <td>{{mouvement.id}}</td>
+      <td>{{mouvement.category}}</td>
+      <td>{{mouvement.montant}}</td>
+    </tr>
+  </tbody>
+</table>
