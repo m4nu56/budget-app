@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {Mouvement} from "../mouvement";
+import {Component, OnInit} from '@angular/core';
+import {Mouvement} from '../mouvement';
 
 @Component({
   selector: 'app-list-mouvement',
@@ -8,9 +8,10 @@ import {Mouvement} from "../mouvement";
 })
 export class ListMouvementComponent implements OnInit {
 
-  listMouvement : Array<Mouvement>;
+  listMouvement: Array<Mouvement>;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
 
