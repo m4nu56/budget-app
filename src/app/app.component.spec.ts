@@ -1,10 +1,14 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import {MouvementComponent} from './mouvement/mouvement.component';
+import {ListMouvementComponent} from './list-mouvement/list-mouvement.component';
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        MouvementComponent,
+        ListMouvementComponent
       ],
     }).compileComponents();
   }));
