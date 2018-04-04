@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/m4nu56/budget-app.svg?branch=master)](https://travis-ci.org/m4nu56/budget-app)
+[![Coverage Status](https://coveralls.io/repos/github/m4nu56/budget-app/badge.svg)](https://coveralls.io/github/m4nu56/budget-app)
 
 # BudgetApp
 
