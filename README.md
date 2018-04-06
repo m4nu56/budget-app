@@ -2,6 +2,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/m4nu56/budget-app/badge.svg)](https://coveralls.io/github/m4nu56/budget-app)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/fb07fcb151854e90b1058771dfd4779c)](https://www.codacy.com/app/m4nu56/budget-app?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=m4nu56/budget-app&amp;utm_campaign=Badge_Grade)
 
+
 # BudgetApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
