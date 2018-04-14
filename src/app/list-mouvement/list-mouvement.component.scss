@@ -1,0 +1,17 @@
+@import "../../sass/tools";
+
+h2 {
+  color: $warning;
+  @include ellipsis;
+}
+
+table.table {
+  thead {
+    tr {
+      background-color: white;
+      th {
+        color: $danger;
+      }
+    }
+  }
+}
