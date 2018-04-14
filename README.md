@@ -1,7 +1,6 @@
 [![Build Status](https://travis-ci.org/m4nu56/budget-app.svg?branch=master)](https://travis-ci.org/m4nu56/budget-app)
 [![Coverage Status](https://coveralls.io/repos/github/m4nu56/budget-app/badge.svg)](https://coveralls.io/github/m4nu56/budget-app)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/fb07fcb151854e90b1058771dfd4779c)](https://www.codacy.com/app/m4nu56/budget-app?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=m4nu56/budget-app&amp;utm_campaign=Badge_Grade)
-
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/fb07fcb151854e90b1058771dfd4779c)](https://www.codacy.com/app/m4nu56/budget-app?utm_source=github.com&utm_medium=referral&utm_content=m4nu56/budget-app&utm_campaign=Badge_Grade)
 
 # BudgetApp
 

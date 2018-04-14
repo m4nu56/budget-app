@@ -1,4 +1,4 @@
-import {AppPage} from './app.po';
+import { AppPage } from './app.po';
 
 describe('budget-app App', () => {
   let page: AppPage;
