@@ -1,11 +1,12 @@
 @charset "UTF-8";
-@import "variables";
-@import "~bourbon/core/bourbon";
-@import "bootstrap_custom";
-@import "fonts/fonts";
-@import "font-awesome-custom";
+@import 'variables';
+@import '~bourbon/core/bourbon';
+@import 'bootstrap_custom';
+@import 'fonts/fonts';
+@import 'font-awesome-custom';
 
-body, html {
+body,
+html {
   background-color: $bg-color;
   color: $text-default-color;
   font-family: Poppins;
@@ -29,8 +30,8 @@ body, html {
     h2 {
       user-select: none;
       transform: rotate(15deg);
-      opacity: .5;
-      text-shadow: 0 1px 5px rgba(0, 0, 0, .9);
+      opacity: 0.5;
+      text-shadow: 0 1px 5px rgba(0, 0, 0, 0.9);
     }
   }
 }
