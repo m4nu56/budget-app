@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-mouvement',
@@ -6,10 +6,7 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./mouvement.component.scss']
 })
 export class MouvementComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
