@@ -1,6 +1,10 @@
+@charset "UTF-8";
 @import "variables";
+@import "~bourbon/core/bourbon";
+@import "bootstrap_custom";
 
 body, html {
   background-color: $bg-color;
-  color: white;
+  color: $text-default-color;
+  font-family: $font-stack-verdana;
 }
