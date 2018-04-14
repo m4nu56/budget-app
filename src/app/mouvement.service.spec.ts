@@ -9,7 +9,10 @@ describe('MouvementService', () => {
     });
   });
 
-  it('should be created', inject([MouvementService], (service: MouvementService) => {
-    expect(service).toBeTruthy();
-  }));
+  it(
+    'should be created',
+    inject([MouvementService], (service: MouvementService) => {
+      expect(service).toBeTruthy();
+    })
+  );
 });
