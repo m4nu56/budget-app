@@ -90,14 +90,8 @@ var AppModule = /** @class */ (function () {
     }
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* NgModule */])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_4__mouvement_mouvement_component__["a" /* MouvementComponent */],
-                __WEBPACK_IMPORTED_MODULE_5__list_mouvement_list_mouvement_component__["a" /* ListMouvementComponent */]
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */]
-            ],
+            declarations: [__WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_4__mouvement_mouvement_component__["a" /* MouvementComponent */], __WEBPACK_IMPORTED_MODULE_5__list_mouvement_list_mouvement_component__["a" /* ListMouvementComponent */]],
+            imports: [__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */]],
             providers: [__WEBPACK_IMPORTED_MODULE_3__mouvement_service__["a" /* MouvementService */]],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */]]
         })
@@ -228,8 +222,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var MouvementComponent = /** @class */ (function () {
     function MouvementComponent() {
     }
-    MouvementComponent.prototype.ngOnInit = function () {
-    };
+    MouvementComponent.prototype.ngOnInit = function () { };
     MouvementComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'app-mouvement',
@@ -273,7 +266,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* enableProdMode */])();
 }
-Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
+Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])()
+    .bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
     .catch(function (err) { return console.log(err); });
 
 
