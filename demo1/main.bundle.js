@@ -27,7 +27,7 @@ module.exports = "{{title}}\n<h1>Welcome to app!</h1>\n\n<app-mouvement></app-mo
 /***/ "./src/app/app.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = "h1 {\n  color: blue; }\n"
+module.exports = "/*!\n * Bootstrap v4.1.0 (https://getbootstrap.com/)\n * Copyright 2011-2018 The Bootstrap Authors\n * Copyright 2011-2018 Twitter, Inc.\n * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)\n */\nh1 {\n  color: #17a2b8;\n  border-top-style: dashed;\n  border-bottom-style: solid; }\n"
 
 /***/ }),
 
@@ -112,14 +112,14 @@ var AppModule = /** @class */ (function () {
 /***/ "./src/app/list-mouvement/list-mouvement.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2>ListMouvement</h2>\n{{ listMouvement | json }}\n\n<table class=\"table\">\n  <thead>\n    <tr>\n      <th>id</th>\n      <th>category</th>\n      <th>montant</th>\n    </tr>\n  </thead>\n\n  <tbody>\n    <tr *ngFor=\"let mouvement of listMouvement\">\n      <td>{{mouvement.id}}</td>\n      <td>{{mouvement.category}}</td>\n      <td>{{mouvement.montant}}</td>\n    </tr>\n  </tbody>\n</table>\n"
+module.exports = "<h2>List des Mouvement blablabla </h2>\n{{ listMouvement | json }}\n\n<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>id</th>\n      <th>category</th>\n      <th>montant</th>\n    </tr>\n  </thead>\n\n  <tbody>\n    <tr *ngFor=\"let mouvement of listMouvement\">\n      <td>{{mouvement.id}}</td>\n      <td>{{mouvement.category}}</td>\n      <td>{{mouvement.montant}}</td>\n    </tr>\n  </tbody>\n</table>\n"
 
 /***/ }),
 
 /***/ "./src/app/list-mouvement/list-mouvement.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "/*!\n * Bootstrap v4.1.0 (https://getbootstrap.com/)\n * Copyright 2011-2018 The Bootstrap Authors\n * Copyright 2011-2018 Twitter, Inc.\n * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)\n */\nh2 {\n  color: #ffc107;\n  display: inline-block;\n  max-width: 100%;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  word-wrap: normal; }\ntable.table thead tr {\n  background-color: white; }\ntable.table thead tr th {\n    color: #dc3545; }\n"
 
 /***/ }),
 
