@@ -17,17 +17,17 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
-/***/ "./src/app/app.component.css":
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
 module.exports = "{{title}}\n<h1>Welcome to app!</h1>\n\n<app-mouvement></app-mouvement>\n\n<app-list-mouvement></app-list-mouvement>\n"
+
+/***/ }),
+
+/***/ "./src/app/app.component.scss":
+/***/ (function(module, exports) {
+
+module.exports = "h1 {\n  color: blue; }\n"
 
 /***/ }),
 
@@ -52,7 +52,7 @@ var AppComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'app-root',
             template: __webpack_require__("./src/app/app.component.html"),
-            styles: [__webpack_require__("./src/app/app.component.css")]
+            styles: [__webpack_require__("./src/app/app.component.scss")]
         })
     ], AppComponent);
     return AppComponent;
@@ -109,17 +109,17 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/list-mouvement/list-mouvement.component.css":
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
 /***/ "./src/app/list-mouvement/list-mouvement.component.html":
 /***/ (function(module, exports) {
 
 module.exports = "<h2>ListMouvement</h2>\n{{ listMouvement | json }}\n\n<table class=\"table\">\n  <thead>\n    <tr>\n      <th>id</th>\n      <th>category</th>\n      <th>montant</th>\n    </tr>\n  </thead>\n\n  <tbody>\n    <tr *ngFor=\"let mouvement of listMouvement\">\n      <td>{{mouvement.id}}</td>\n      <td>{{mouvement.category}}</td>\n      <td>{{mouvement.montant}}</td>\n    </tr>\n  </tbody>\n</table>\n"
+
+/***/ }),
+
+/***/ "./src/app/list-mouvement/list-mouvement.component.scss":
+/***/ (function(module, exports) {
+
+module.exports = ""
 
 /***/ }),
 
@@ -154,7 +154,7 @@ var ListMouvementComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'app-list-mouvement',
             template: __webpack_require__("./src/app/list-mouvement/list-mouvement.component.html"),
-            styles: [__webpack_require__("./src/app/list-mouvement/list-mouvement.component.css")]
+            styles: [__webpack_require__("./src/app/list-mouvement/list-mouvement.component.scss")]
         }),
         __metadata("design:paramtypes", [])
     ], ListMouvementComponent);
@@ -195,17 +195,17 @@ var MouvementService = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/mouvement/mouvement.component.css":
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
 /***/ "./src/app/mouvement/mouvement.component.html":
 /***/ (function(module, exports) {
 
 module.exports = "<p>\n  mouvement works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/mouvement/mouvement.component.scss":
+/***/ (function(module, exports) {
+
+module.exports = ""
 
 /***/ }),
 
@@ -234,7 +234,7 @@ var MouvementComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'app-mouvement',
             template: __webpack_require__("./src/app/mouvement/mouvement.component.html"),
-            styles: [__webpack_require__("./src/app/mouvement/mouvement.component.css")]
+            styles: [__webpack_require__("./src/app/mouvement/mouvement.component.scss")]
         }),
         __metadata("design:paramtypes", [])
     ], MouvementComponent);
