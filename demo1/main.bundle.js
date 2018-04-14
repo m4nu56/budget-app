@@ -20,7 +20,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "{{title}}\n<h1>Welcome to app!</h1>\n\n<app-mouvement></app-mouvement>\n\n<app-list-mouvement></app-list-mouvement>\n"
+module.exports = "{{title}}\n<h1>\n  Welcome to app! €\n</h1>\n\n<i class=\"fa fa-magic fa-3x\"></i>\n<i class=\"fa fa-chevron-right\"></i>\n\n<h2>FlatIcons</h2>\n<i class=\"fi flaticon-dislike\"></i>\n\n<app-mouvement></app-mouvement>\n\n<app-list-mouvement></app-list-mouvement>\n"
 
 /***/ }),
 
