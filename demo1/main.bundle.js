@@ -112,7 +112,7 @@ var AppModule = /** @class */ (function () {
 /***/ "./src/app/list-mouvement/list-mouvement.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2>List des Mouvement blablabla </h2>\n{{ listMouvement | json }}\n\n<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>id</th>\n      <th>category</th>\n      <th>montant</th>\n    </tr>\n  </thead>\n\n  <tbody>\n    <tr *ngFor=\"let mouvement of listMouvement\">\n      <td>{{mouvement.id}}</td>\n      <td>{{mouvement.category}}</td>\n      <td>{{mouvement.montant}}</td>\n    </tr>\n  </tbody>\n</table>\n"
+module.exports = "<h2>List des Mouvement blablabla </h2>\n\n<div class=\"flex-container\">\n\n  <div class=\"text-white bg-warning\">\n    <h2>warning</h2>\n  </div>\n  <div class=\"text-white bg-info\">\n    <h2>info</h2>\n  </div>\n  <div class=\"text-white bg-primary\">\n    <h2>primary</h2>\n  </div>\n  <div class=\"text-white bg-secondary\">\n    <h2>secondary</h2>\n  </div>\n  <div class=\"text-white bg-danger\">\n    <h2>danger</h2>\n  </div>\n  <div class=\"text-white bg-dark\">\n    <h2>dark</h2>\n  </div>\n\n</div>\n\n\n<table class=\"table table-bordered\">\n  <thead>\n    <tr>\n      <th>id</th>\n      <th>category</th>\n      <th>montant</th>\n    </tr>\n  </thead>\n\n  <tbody>\n    <tr *ngFor=\"let mouvement of listMouvement\">\n      <td>{{mouvement.id}}</td>\n      <td>{{mouvement.category}}</td>\n      <td>{{mouvement.montant}}</td>\n    </tr>\n  </tbody>\n</table>\n"
 
 /***/ }),
 
