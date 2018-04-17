@@ -5,15 +5,12 @@ import { DashingGridsterItem } from './interfaces/dashing-gridster-item';
   selector: '[appWidgetHost]'
 })
 export class WidgetHostDirective {
-
   private data: DashingGridsterItem;
 
-  @Input('appWidgetHost') set appWidgetHost(data: DashingGridsterItem){
+  @Input('appWidgetHost')
+  set appWidgetHost(data: DashingGridsterItem) {
     this.data = data;
   }
 
-  constructor(public viewContainerRef: ViewContainerRef) { 
-
-  }
-
+  constructor(public viewContainerRef: ViewContainerRef) {}
 }
