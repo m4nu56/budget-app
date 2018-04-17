@@ -22,7 +22,7 @@ export class GiphyDataService {
     const params = new HttpParams()
       .set('q', q)
       .set('limit', '100')
-      .set('offset', Math.floor(Math.random() * this.offset_max + 1).toString())
+      .set('offset', Math.abs(Math.floor(Math.random() * this.offset_max + 1)).toString())
       .set('api_key', this.GIPHY_API_KEY);
 
     return this.http
