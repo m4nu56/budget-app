@@ -6,15 +6,12 @@ import { DashingGridsterItem } from '../../interfaces/dashing-gridster-item';
   template: `
     <h4>Hello World!<h4>
     c: {{ data.cols }} r: {{ data.rows }}
-  `,
+  `
 })
 export class HelloWorldComponent implements OnInit {
-
   @Input() data: DashingGridsterItem;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

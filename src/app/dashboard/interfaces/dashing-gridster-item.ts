@@ -4,6 +4,7 @@ interface Widget {
   component: any;
   icon: string | null;
   class: string | null;
+  params?: any;
 }
 
 export interface DashingGridsterItem extends GridsterItem {
