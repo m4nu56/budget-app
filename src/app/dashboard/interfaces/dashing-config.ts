@@ -1,5 +1,5 @@
-import { DashingGridsterItem } from "./dashing-gridster-item";
+import { DashingGridsterItem } from './dashing-gridster-item';
 
 export interface DashingConfig {
-    items: Array<DashingGridsterItem>;
+  items: Array<DashingGridsterItem>;
 }
