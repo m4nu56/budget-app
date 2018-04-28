@@ -11,7 +11,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { WidgetGiphyComponent } from './widgets/widget-giphy/widget-giphy.component';
 import { WidgetDogComponent } from './widgets/widget-dog/widget-dog.component';
 import { WidgetWeatherComponent } from './widgets/widget-weather/widget-weather.component';
-import { WeatherDataService } from './widgets/widget-weather/weather-data.service';
 
 @NgModule({
   imports: [CommonModule, DashboardRoutesModule, GridsterModule, HttpClientModule],
@@ -25,11 +24,6 @@ import { WeatherDataService } from './widgets/widget-weather/weather-data.servic
     WidgetWeatherComponent
   ],
   providers: [DashboardGridsterConfigService],
-  entryComponents: [
-    HelloWorldComponent, 
-    WidgetGiphyComponent, 
-    WidgetDogComponent,
-    WidgetWeatherComponent
-  ]
+  entryComponents: [HelloWorldComponent, WidgetGiphyComponent, WidgetDogComponent, WidgetWeatherComponent]
 })
 export class DashboardModule {}

@@ -1,26 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { WeatherDataService } from './weather-data.service';
 import { Weather } from './interfaces/weather';
+import { DashingGridsterItem } from '../../interfaces/dashing-gridster-item';
 
 @Component({
   selector: 'app-widget-weather',
-  template: `<span *ngIf="weather">{{weather.text}}</span>`,
+  templateUrl: './widget-weather.component.html',
   styleUrls: ['./widget-weather.component.scss'],
   providers: [WeatherDataService]
 })
 export class WidgetWeatherComponent implements OnInit {
+  weather: Weather;
+  city = 'biarritz';
 
-  private weather: Weather;
+  @Input() data: DashingGridsterItem;
 
-  constructor(private weatherDataService: WeatherDataService) { }
+  constructor(private weatherDataService: WeatherDataService) {}
 
   ngOnInit() {
-    this.weatherDataService.getWeather('vannes').subscribe(
-      weather => {
-        this.weather = weather;
-        console.log(weather);
-      }
-    );
+    this.city = this.data.widget.params.city;
+    this.weatherDataService.getWeather(this.city).subscribe(weather => {
+      this.weather = weather;
+    });
   }
-
 }

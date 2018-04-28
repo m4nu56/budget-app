@@ -8,9 +8,8 @@ describe('WidgetWeatherComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WidgetWeatherComponent ]
-    })
-    .compileComponents();
+      declarations: [WidgetWeatherComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
