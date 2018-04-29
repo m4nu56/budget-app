@@ -340,12 +340,16 @@ var DashboardComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__widgets_hello_world_hello_world_component__ = __webpack_require__("./src/app/dashboard/widgets/hello-world/hello-world.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__widgets_widget_giphy_widget_giphy_component__ = __webpack_require__("./src/app/dashboard/widgets/widget-giphy/widget-giphy.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__widgets_widget_dog_widget_dog_component__ = __webpack_require__("./src/app/dashboard/widgets/widget-dog/widget-dog.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__widgets_widget_weather_widget_weather_component__ = __webpack_require__("./src/app/dashboard/widgets/widget-weather/widget-weather.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -368,10 +372,12 @@ var DashboardModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_6__widget_container_component__["a" /* WidgetContainerComponent */],
                 __WEBPACK_IMPORTED_MODULE_7__widget_host_directive__["a" /* WidgetHostDirective */],
                 __WEBPACK_IMPORTED_MODULE_8__widgets_hello_world_hello_world_component__["a" /* HelloWorldComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__widgets_widget_giphy_widget_giphy_component__["a" /* WidgetGiphyComponent */]
+                __WEBPACK_IMPORTED_MODULE_10__widgets_widget_giphy_widget_giphy_component__["a" /* WidgetGiphyComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__widgets_widget_dog_widget_dog_component__["a" /* WidgetDogComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__widgets_widget_weather_widget_weather_component__["a" /* WidgetWeatherComponent */]
             ],
             providers: [__WEBPACK_IMPORTED_MODULE_5__dashboard_gridster_config_service__["a" /* DashboardGridsterConfigService */]],
-            entryComponents: [__WEBPACK_IMPORTED_MODULE_8__widgets_hello_world_hello_world_component__["a" /* HelloWorldComponent */], __WEBPACK_IMPORTED_MODULE_10__widgets_widget_giphy_widget_giphy_component__["a" /* WidgetGiphyComponent */]]
+            entryComponents: [__WEBPACK_IMPORTED_MODULE_8__widgets_hello_world_hello_world_component__["a" /* HelloWorldComponent */], __WEBPACK_IMPORTED_MODULE_10__widgets_widget_giphy_widget_giphy_component__["a" /* WidgetGiphyComponent */], __WEBPACK_IMPORTED_MODULE_11__widgets_widget_dog_widget_dog_component__["a" /* WidgetDogComponent */], __WEBPACK_IMPORTED_MODULE_12__widgets_widget_weather_widget_weather_component__["a" /* WidgetWeatherComponent */]]
         })
     ], DashboardModule);
     return DashboardModule;
@@ -554,6 +560,118 @@ var HelloWorldComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/dashboard/widgets/widget-dog/dog-data.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DogDataService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__("./node_modules/rxjs/Rx.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/map.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var DogDataService = /** @class */ (function () {
+    function DogDataService(http) {
+        this.http = http;
+        this.timer = __WEBPACK_IMPORTED_MODULE_1_rxjs__["Observable"].interval(3000).startWith(0);
+    }
+    DogDataService.prototype.getImage = function () {
+        var _this = this;
+        return this.timer.switchMap(function () { return _this.getDogImage(); });
+    };
+    DogDataService.prototype.getDogImage = function () {
+        var _this = this;
+        var params = new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["c" /* HttpParams */]();
+        return this.http
+            .get('//dog.ceo/api/breeds/image/random', { params: params })
+            .map(function (response) { return _this.mapDataFromApi(response); });
+    };
+    DogDataService.prototype.mapDataFromApi = function (response) {
+        var dogImage = response;
+        return dogImage;
+    };
+    DogDataService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]])
+    ], DogDataService);
+    return DogDataService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/dashboard/widgets/widget-dog/widget-dog.component.scss":
+/***/ (function(module, exports) {
+
+module.exports = ":host {\n  height: 100%; }\n  :host img {\n    height: 100%; }\n  :host small {\n    position: absolute;\n    z-index: 1;\n    bottom: 5px;\n    right: 5px; }\n"
+
+/***/ }),
+
+/***/ "./src/app/dashboard/widgets/widget-dog/widget-dog.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WidgetDogComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dog_data_service__ = __webpack_require__("./src/app/dashboard/widgets/widget-dog/dog-data.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var WidgetDogComponent = /** @class */ (function () {
+    function WidgetDogComponent(dogDataService) {
+        this.dogDataService = dogDataService;
+    }
+    WidgetDogComponent.prototype.getImage = function () {
+        var _this = this;
+        this.dogDataService.getImage().subscribe(function (image) {
+            _this.image = image;
+        });
+    };
+    WidgetDogComponent.prototype.ngOnInit = function () {
+        this.getImage();
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], WidgetDogComponent.prototype, "data", void 0);
+    WidgetDogComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-widget-dog',
+            template: "\n  <img *ngIf=\"image\" [src]=\"image.message\">\n  <small>&copy;DogAPI.com</small>\n  ",
+            styles: [__webpack_require__("./src/app/dashboard/widgets/widget-dog/widget-dog.component.scss")],
+            providers: [__WEBPACK_IMPORTED_MODULE_1__dog_data_service__["a" /* DogDataService */]]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__dog_data_service__["a" /* DogDataService */]])
+    ], WidgetDogComponent);
+    return WidgetDogComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/dashboard/widgets/widget-giphy/giphy-data.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -695,6 +813,122 @@ var WidgetGiphyComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__giphy_data_service__["a" /* GiphyDataService */]])
     ], WidgetGiphyComponent);
     return WidgetGiphyComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/dashboard/widgets/widget-weather/weather-data.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WeatherDataService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var WeatherDataService = /** @class */ (function () {
+    function WeatherDataService(http) {
+        this.http = http;
+    }
+    WeatherDataService.prototype.getWeather = function (city) {
+        return this.getWeatherYahoo(city);
+    };
+    WeatherDataService.prototype.makeYqlQuery = function (city) {
+        return "select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text=\"" + city + "\")";
+    };
+    WeatherDataService.prototype.getWeatherYahoo = function (city) {
+        var _this = this;
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpParams */]().set('q', this.makeYqlQuery(city)).set('format', 'json');
+        return this.http
+            .get('https://query.yahooapis.com/v1/public/yql', { params: params })
+            .map(function (response) { return _this.mapDataFromApi(response); });
+    };
+    WeatherDataService.prototype.mapDataFromApi = function (response) {
+        if (response.query.count < 1) {
+            return null;
+        }
+        return response.query.results.channel.item.condition;
+    };
+    WeatherDataService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+    ], WeatherDataService);
+    return WeatherDataService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/dashboard/widgets/widget-weather/widget-weather.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<h4>{{city}}</h4>\n<span *ngIf=\"weather\">{{weather.text}} - {{weather.temp}}°F</span>\n"
+
+/***/ }),
+
+/***/ "./src/app/dashboard/widgets/widget-weather/widget-weather.component.scss":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/dashboard/widgets/widget-weather/widget-weather.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WidgetWeatherComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__weather_data_service__ = __webpack_require__("./src/app/dashboard/widgets/widget-weather/weather-data.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var WidgetWeatherComponent = /** @class */ (function () {
+    function WidgetWeatherComponent(weatherDataService) {
+        this.weatherDataService = weatherDataService;
+        this.city = 'biarritz';
+    }
+    WidgetWeatherComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.city = this.data.widget.params.city;
+        this.weatherDataService.getWeather(this.city).subscribe(function (weather) {
+            _this.weather = weather;
+        });
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], WidgetWeatherComponent.prototype, "data", void 0);
+    WidgetWeatherComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-widget-weather',
+            template: __webpack_require__("./src/app/dashboard/widgets/widget-weather/widget-weather.component.html"),
+            styles: [__webpack_require__("./src/app/dashboard/widgets/widget-weather/widget-weather.component.scss")],
+            providers: [__WEBPACK_IMPORTED_MODULE_1__weather_data_service__["a" /* WeatherDataService */]]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__weather_data_service__["a" /* WeatherDataService */]])
+    ], WidgetWeatherComponent);
+    return WidgetWeatherComponent;
 }());
 
 
@@ -892,29 +1126,49 @@ var PageNotFoundComponent = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_dashboard_widgets_hello_world_hello_world_component__ = __webpack_require__("./src/app/dashboard/widgets/hello-world/hello-world.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_dashboard_widgets_widget_giphy_widget_giphy_component__ = __webpack_require__("./src/app/dashboard/widgets/widget-giphy/widget-giphy.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_dashboard_widgets_widget_weather_widget_weather_component__ = __webpack_require__("./src/app/dashboard/widgets/widget-weather/widget-weather.component.ts");
+
 
 
 var dashingConfig = {
     items: [
+        {
+            cols: 1,
+            rows: 1,
+            widget: { component: __WEBPACK_IMPORTED_MODULE_2__app_dashboard_widgets_widget_weather_widget_weather_component__["a" /* WidgetWeatherComponent */], params: { city: 'Vannes, France' }, icon: null, class: 'bg-success' }
+        },
         { cols: 1, rows: 1, widget: { component: __WEBPACK_IMPORTED_MODULE_0__app_dashboard_widgets_hello_world_hello_world_component__["a" /* HelloWorldComponent */], icon: 'fa fa-magic', class: 'bg-primary' } },
         {
             cols: 2,
             rows: 2,
-            widget: { component: __WEBPACK_IMPORTED_MODULE_1__app_dashboard_widgets_widget_giphy_widget_giphy_component__["a" /* WidgetGiphyComponent */], params: { q: 'funny silicon valley' }, icon: null, class: null }
+            widget: { component: null, params: { q: 'funny silicon valley' }, icon: null, class: null }
         },
-        { cols: 1, rows: 1, widget: { component: null, icon: null, class: 'bg-success' } },
+        {
+            cols: 1,
+            rows: 1,
+            widget: {
+                component: __WEBPACK_IMPORTED_MODULE_2__app_dashboard_widgets_widget_weather_widget_weather_component__["a" /* WidgetWeatherComponent */],
+                params: { city: 'Biarritz, France' },
+                icon: null,
+                class: 'bg-success'
+            }
+        },
         { cols: 2, rows: 1, widget: { component: null, icon: 'fi flaticon-book', class: 'bg-warning' } },
         {
             cols: 1,
             rows: 1,
-            widget: { component: __WEBPACK_IMPORTED_MODULE_1__app_dashboard_widgets_widget_giphy_widget_giphy_component__["a" /* WidgetGiphyComponent */], params: { q: 'funny baby' }, icon: null, class: 'bg-warning' }
+            widget: { component: __WEBPACK_IMPORTED_MODULE_1__app_dashboard_widgets_widget_giphy_widget_giphy_component__["a" /* WidgetGiphyComponent */], params: { q: 'funny babies' }, icon: null, class: 'bg-info' }
         },
-        { cols: 2, rows: 1, widget: { component: __WEBPACK_IMPORTED_MODULE_0__app_dashboard_widgets_hello_world_hello_world_component__["a" /* HelloWorldComponent */], icon: null, class: 'bg-info' } },
+        {
+            cols: 1,
+            rows: 1,
+            widget: { component: __WEBPACK_IMPORTED_MODULE_1__app_dashboard_widgets_widget_giphy_widget_giphy_component__["a" /* WidgetGiphyComponent */], params: { q: 'la casa de papel' }, icon: null, class: 'bg-info' }
+        },
+        { cols: 2, rows: 1, widget: { component: null, icon: null, class: 'bg-info' } },
         { cols: 1, rows: 1, widget: { component: null, icon: null, class: 'bg-light text-dark' } },
         { cols: 1, rows: 1, widget: { component: null, icon: 'fa fa-bitcoin', class: 'bg-dark' } },
         { cols: 3, rows: 2, widget: { component: null, icon: 'fa fa-dowload', class: 'bg-primary' } },
         { cols: 1, rows: 1, widget: { component: null, icon: 'fi flaticon-github', class: 'bg-success' } },
-        { cols: 1, rows: 1, widget: { component: null, icon: null, class: 'bg-secondary' } },
         { cols: 1, rows: 1, widget: { component: null, icon: null, class: 'bg-warning' } },
         { cols: 1, rows: 1, widget: { component: null, icon: 'fa fa-warning', class: 'bg-danger' } }
     ]
