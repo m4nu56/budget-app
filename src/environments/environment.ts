@@ -1,5 +1,6 @@
 import { DashingConfig } from '../app/dashboard/interfaces/dashing-config';
 import { HelloWorldComponent } from '../app/dashboard/widgets/hello-world/hello-world.component';
+import { WidgetDogComponent } from '../app/dashboard/widgets/widget-dog/widget-dog.component';
 
 // The file contents for the current environment will overwrite these during build.
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
@@ -10,7 +11,7 @@ const dashingConfig: DashingConfig = {
   items: [
     { cols: 1, rows: 1, widget: { component: HelloWorldComponent, icon: 'fa fa-magic', class: 'bg-primary' } },
     { cols: 1, rows: 1, widget: { component: null, icon: 'fa fa-google', class: 'bg-secondary' } },
-    { cols: 1, rows: 1, widget: { component: null, icon: null, class: 'bg-success' } },
+    { cols: 2, rows: 2, widget: { component: WidgetDogComponent, icon: null, class: 'bg-success' } },
     { cols: 2, rows: 1, widget: { component: null, icon: 'fi flaticon-book', class: 'bg-warning' } },
     { cols: 1, rows: 1, widget: { component: null, icon: null, class: 'bg-warning' } },
     { cols: 2, rows: 1, widget: { component: null, icon: null, class: 'bg-info' } },

@@ -9,6 +9,8 @@ import { WidgetHostDirective } from './widget-host.directive';
 import { HelloWorldComponent } from './widgets/hello-world/hello-world.component';
 import { HttpClientModule } from '@angular/common/http';
 import { WidgetGiphyComponent } from './widgets/widget-giphy/widget-giphy.component';
+import { WidgetDogComponent } from './widgets/widget-dog/widget-dog.component';
+import { WidgetWeatherComponent } from './widgets/widget-weather/widget-weather.component';
 
 @NgModule({
   imports: [CommonModule, DashboardRoutesModule, GridsterModule, HttpClientModule],
@@ -17,9 +19,11 @@ import { WidgetGiphyComponent } from './widgets/widget-giphy/widget-giphy.compon
     WidgetContainerComponent,
     WidgetHostDirective,
     HelloWorldComponent,
-    WidgetGiphyComponent
+    WidgetGiphyComponent,
+    WidgetDogComponent,
+    WidgetWeatherComponent
   ],
   providers: [DashboardGridsterConfigService],
-  entryComponents: [HelloWorldComponent, WidgetGiphyComponent]
+  entryComponents: [HelloWorldComponent, WidgetGiphyComponent, WidgetDogComponent, WidgetWeatherComponent]
 })
 export class DashboardModule {}
