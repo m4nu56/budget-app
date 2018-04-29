@@ -65,15 +65,8 @@
     "typescript": "~2.5.3"
   },
   "browserslist": {
-    "demo1": [
-      "defaults"
-    ],
-    "prod": [
-      "> 1%",
-      "last 2 versions"
-    ],
-    "dev": [
-      "last 2 Chrome version"
-    ]
+    "demo1": ["defaults"],
+    "prod": ["> 1%", "last 2 versions"],
+    "dev": ["last 2 Chrome version"]
   }
 }
